@@ -99,6 +99,7 @@ Alice can assign witness-permission to the administrator. Since the administrato
   
 ```
 #### GetTransactionSignWeight
+*@l3333ve The transaction sign weight
  * @param transaction 
  * @return The transaction sign weight
  
@@ -126,7 +127,8 @@ TransactionSignWeight {
 
 ```
 
-#### AddSign
+#### AddSign 
+Daniil120707))
  * @param transaction 
  * @return The transaction
 
