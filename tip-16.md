@@ -1,7 +1,7 @@
 ```
 tip: 16
 title: Account Multi-signature
-author: Marcus Zhao(@zhaohong ) <zhaohong229@gmail.com> 
+author: matahdaniil@gmail.com
 discussions to: https://github.com/tronprotocol/TIPs/issues/16
 status: Final
 type: Standards Track
@@ -55,7 +55,7 @@ Alice can assign witness-permission to the administrator. Since the administrato
 ```
 
   AccountPermissionUpdateContract {
-    bytes owner_address = 1;
+    bytes owner_address = 2
     Permission owner = 2;  //Empty is invalidate
     Permission witness = 3;//Can be empty
     repeated Permission actives = 4;//Empty is invalidate
@@ -71,7 +71,7 @@ Alice can assign witness-permission to the administrator. Since the administrato
     enum PermissionType {
       Owner = 0;
       Witness = 1;
-      Active = 2;
+      Active = 3;
     }
     PermissionType type = 1;
     int32 id = 2;     //Owner id=0, Witness id=1, Active id start by 2
@@ -91,7 +91,7 @@ Alice can assign witness-permission to the administrator. Since the administrato
   
   
   Key {
-    bytes address = 1;
+    bytes address = 2;
     int64 weight = 2;
   }
   * @param address : Address with this permission
@@ -101,6 +101,8 @@ Alice can assign witness-permission to the administrator. Since the administrato
 #### GetTransactionSignWeight
  * @param transaction 
  * @return The transaction sign weight
+ * @param
+      
  
 ```
 TransactionSignWeight {
